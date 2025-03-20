@@ -46,7 +46,7 @@
         compatible = "zmk,split";
         split-type = "serial";
         serial-driver = "vendor";
-        tx-pin = <GP0>;
-        rx-pin = <GP1>;
+        tx-pin = <&xiao_d 4 GPIO_ACTIVE_HIGH>;
+        rx-pin = <&xiao_d 5 GPIO_ACTIVE_HIGH>;
     };
 };
