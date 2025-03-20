@@ -1,8 +1,17 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
+config ZMK_SPLIT
+    default y
+
 config SHIELD_TOTEM_LEFT
     def_bool $(shields_list_contains,totem_left)
 
 config SHIELD_TOTEM_RIGHT
     def_bool $(shields_list_contains,totem_right)
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y if SHIELD_TOTEM_LEFT
+
+config ZMK_SPLIT_ROLE_PERIPHERAL
+    default y if SHIELD_TOTEM_RIGHT

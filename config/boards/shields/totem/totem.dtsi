@@ -41,4 +41,11 @@
             , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
+
+    &split {
+        split-type = "serial";
+        serial-driver = "vendor";
+        tx-pin = <GP0>;
+        rx-pin = <GP1>;
+    };
 };
