@@ -11,7 +11,9 @@ config SHIELD_TOTEM_RIGHT
     def_bool $(shields_list_contains,totem_right)
 
 config ZMK_SPLIT_ROLE_CENTRAL
+    bool
     default y if SHIELD_TOTEM_LEFT
 
 config ZMK_SPLIT_ROLE_PERIPHERAL
+    bool
     default y if SHIELD_TOTEM_RIGHT
